@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kalkulator PSDH-DR & DENDA</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="header-logo">
+    <img src="https://i.imgur.com/GUkppW0.png" alt="Logo KLHK">
+    <h1>KALKULATOR PSDH-DR & DENDA</h1>
+  </div>
+
+  <div class="wrapper">
+    <div class="header-banner">
+      <div class="title-left">KALKULATOR PSDH-DR & DENDA</div>
+      <div class="title-right">
+        <div>DITJEN PHL</div>
+        <div>KEMENHUT</div>
+      </div>
+    </div>
+
+    <div id="kontainerIdentitas">
+      <label>Nama Pelaku Usaha:
+        <input type="text" id="namaPelakuUsaha">
+      </label>
+
+      <label>Provinsi:
+        <select id="provinsi">
+          <option value="">-- Pilih Provinsi --</option>
+          <option>Aceh</option>
+          <option>Sumatera Utara</option>
+          <option>Jawa Timur</option>
+          <option>Kalimantan Timur</option>
+          <!-- tambahkan provinsi lainnya -->
+        </select>
+      </label>
+
+      <label>Asal Kayu:
+        <select id="asalKayu">
+          <option value="">-- Pilih --</option>
+          <option value="Tumbuh Alami">Tumbuh Alami</option>
+          <option value="Budidaya">Budidaya</option>
+        </select>
+      </label>
+
+      <label>Jenis Perizinan:
+        <select id="jenisPerizinan">
+          <option value="">-- Pilih --</option>
+          <option value="PBPH">PBPH</option>
+          <option value="PPKH">PPKH</option>
+          <!-- dst -->
+        </select>
+      </label>
+
+      <button id="btnLanjut" onclick="lanjutKontainer()">Lanjut</button>
+    </div>
+
+    <div id="kontainerInput" style="display: none;"></div>
+
+    <div class="footer">
+      <p><strong>Disclaimer:</strong> Total PSDH-DR yang dihasilkan merupakan hasil simulasi.</p>
+      <ol>
+        <li>PP No. 36 Tahun 2024</li>
+        <li>Permen LHK No. 2 Tahun 2025</li>
+      </ol>
+    </div>
+
+    <div class="footer copyright">
+      <p>&copy; 2025 BPHL 8 Surabaya | Kementerian Kehutanan</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
