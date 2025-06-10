@@ -1,6 +1,5 @@
 const GAS_ENDPOINT = "https://script.google.com/macros/s/AKfycbzcINujyipV6jyfuPVI-bLerePHhicZwV7-2mECLFavmVEcK5iO4PN_QZ0vLBOxDc09/exec";
 
-
 const kelompokMap = {
   // MERANTI
   "Agathis": "MERANTI",
@@ -1193,26 +1192,31 @@ function simpanData() {
       `;
        rekapDiv.style.display = "block"; // ✅ Tampilkan hanya setelah simpan
     }
-      
+
+    console.log('Data yang akan dikirim:', data);
+
     fetch(GAS_ENDPOINT, {
-  method: "POST",
-  headers: {
-    "Content-Type": "application/json"
-  },
-  body: JSON.stringify({
-    action: "prosesPerhitungan",
-    data: data
-  })
-})
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        action: "prosesPerhitungan",
+        data: data
+      })
+    })
+    .then(response => response.json())
+    .then(data => {
+      console.log('Data yang diterima dari server:', data);
+      showHasil(data);
+    })
+    .catch(error => {
+      console.error("Terjadi kesalahan:", error);
+    });
 
-.then(response => response.json())
-.then(data => {
-  showHasil(data); // Panggil fungsi handler hasil
-})
-.catch(error => {
-  console.error("Terjadi kesalahan:", error);
-});
-
+  } catch (error) {
+    console.error("Error di simpanData:", error);
+  }
 }
 
 function tampilkanDenda() {
