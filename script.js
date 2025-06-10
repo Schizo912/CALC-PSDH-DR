@@ -708,7 +708,7 @@ function renderKontainer(kode) {
     </table>
 
     <button onclick='tambahBaris()'>+ Tambah Baris</button>
-    <button onclick='simpanData()'>KALKULASI REKAPAN</button>
+    <button onclick='simpanData()'>KALKULASI REKAPAN & DOWNLOAD CSV PSDH-DR</button>
     <div id="rekapSederhana" class="rekap-box" style="display: none;"></div>
 
     <hr style="margin:20px 0;">
