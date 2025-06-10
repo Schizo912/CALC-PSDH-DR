@@ -1233,7 +1233,7 @@ function tampilkanDenda() {
             <td style="width:30px; padding-top:6px;">
               <input type="radio" id="radio-${idx}" name="radio-denda" value="${item[1]}" onchange="hitungTotalDenda(this)">
             </td>
-            <td style="padding:6px 0; color:#5c3d00; font-size:14px; line-height:1.4;text-align: left;">
+            <td style="padding:6px 0; color:#5c3d00; font-size:14px; line-height:1.4;">
               <label for="radio-${idx}">${item[0]} <span style="color:#997000;">(x${item[1]} PSDH)</span></label>
             </td>
           </tr>
@@ -1357,14 +1357,8 @@ function tampilkanRekapDenda(faktor) {
 
 function downloadCSV_PSDHDR(data) {
   const meta = window.metadata;
-
-  // Cek jika data kosong
-  if (!data || data.length === 0) {
-    alert("Tidak ada data yang dapat diunduh.");
-    return;
-  }
-
   let csv = `Nama Pelaku Usaha:,"${meta.namaPelakuUsaha}"\nProvinsi:,"${meta.provinsi}"\nRegion:,"${meta.region}"\nAsal Kayu:,"${meta.asalKayu}"\nJenis Perizinan:,"${meta.jenisPerizinan}"\n\n`;
+
   csv += 'Nama Tanaman,Diameter,TBC,Volume (m3),Kelompok,Sortimen,PSDH (Rp),DR (Rp)\n';
 
   data.forEach(row => {
@@ -1382,15 +1376,22 @@ function downloadCSV_PSDHDR(data) {
 
   const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
   const link = document.createElement('a');
-  const namaFile = `Rekap_PSDH_DR_${meta.namaPelakuUsaha.replace(/\s+/g, '_')}_${new Date().toISOString().slice(0,10)}.csv`;
   link.href = URL.createObjectURL(blob);
-  link.download = namaFile;
+  const namaFile = `Rekap_PSDH_DR${meta.namaPelakuUsaha.replace(/\s+/g, '_')}_${new Date().toISOString().slice(0,10)}.csv`;
+link.download = namaFile;
 
   link.style.display = 'none';
   document.body.appendChild(link);
   link.click();
   document.body.removeChild(link);
 }
+
+function downloadCSV_Denda() {
+  const rows = document.querySelectorAll('#rekapDendaTable table tbody tr');
+  if (rows.length === 0) {
+    alert("Tidak ada data rekap denda.");
+    return;
+  }
 
   const meta = window.metadata;
   let csv = 
