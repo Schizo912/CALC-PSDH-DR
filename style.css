@@ -38,6 +38,18 @@ input, select {
   text-align: center;
 }
 
+ input[type="text"],
+  input[type="number"],
+  select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 4px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    text-align: center;
+  }
+
 button {
   background-color: #4d8533;
   color: white;
@@ -138,5 +150,9 @@ td input, td select {
   table td {
     text-align: center;
     vertical-align: middle;
+  }
+
+#daftarDenda td {
+    text-align: left !important;
   }
 }

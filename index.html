@@ -7,69 +7,121 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="header-logo">
-    <img src="https://i.imgur.com/GUkppW0.png" alt="Logo KLHK">
-    <h1>KALKULATOR PSDH-DR & DENDA</h1>
+  <div class="wrapper">
+
+<div style="
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Segoe UI', 'Roboto', sans-serif;
+  margin-bottom: 30px;  /* ✅ Jarak ke bawah */
+">
+  <!-- Judul kiri -->
+  <div style="font-size: 24px; font-weight: 600;">
+    KALKULATOR PSDH-DR & DENDA
   </div>
 
-  <div class="wrapper">
-    <div class="header-banner">
-      <div class="title-left">KALKULATOR PSDH-DR & DENDA</div>
-      <div class="title-right">
-        <div>DITJEN PHL</div>
-        <div>KEMENHUT</div>
-      </div>
+  <!-- Info kanan -->
+  <div style="text-align: right; line-height: 1.2;">
+    <div style="font-size: 20 px; font-weight: 700; letter-spacing: 4px; padding-right: 2px;">
+      DITJEN PHL
     </div>
+    <div style="font-size: 20px; font-weight: 800; letter-spacing: 2px;">
+      KEMENHUT
+    </div>
+  </div>
+</div>
 
     <div id="kontainerIdentitas">
       <label>Nama Pelaku Usaha:
         <input type="text" id="namaPelakuUsaha">
       </label>
-
       <label>Provinsi:
         <select id="provinsi">
           <option value="">-- Pilih Provinsi --</option>
           <option>Aceh</option>
-          <option>Sumatera Utara</option>
-          <option>Jawa Timur</option>
-          <option>Kalimantan Timur</option>
-          <!-- tambahkan provinsi lainnya -->
-        </select>
-      </label>
+      	<option>Sumatera Utara</option>
+      <option>Sumatera Barat</option>
+      <option>Riau</option>
+      <option>Jambi</option>
+      <option>Sumatera Selatan</option>
+      <option>Bengkulu</option>
+      <option>Lampung</option>
+      <option>Kepulauan Bangka Belitung</option>
+      <option>Kepulauan Riau</option>
+      <option>DKI Jakarta</option>
+      <option>Jawa Barat</option>
+      <option>Jawa Tengah</option>
+      <option>DI Yogyakarta</option>
+      <option>Jawa Timur</option>
+      <option>Banten</option>
+      <option>Bali</option>
+      <option>Nusa Tenggara Barat</option>
+      <option>Nusa Tenggara Timur</option>
+      <option>Kalimantan Barat</option>
+      <option>Kalimantan Tengah</option>
+      <option>Kalimantan Selatan</option>
+      <option>Kalimantan Timur</option>
+      <option>Kalimantan Utara</option>
+      <option>Sulawesi Utara</option>
+      <option>Sulawesi Tengah</option>
+      <option>Sulawesi Selatan</option>
+      <option>Sulawesi Tenggara</option>
+      <option>Gorontalo</option>
+      <option>Sulawesi Barat</option>
+      <option>Maluku</option>
+      <option>Maluku Utara</option>
+      <option>Papua</option>
+      <option>Papua Barat</option>
+      <option>Papua Tengah</option>
+      <option>Papua Pegunungan</option>
+      <option>Papua Barat Daya</option>
+      <option>Papua Selatan</option>
+    </select>
+  </label><br>
 
-      <label>Asal Kayu:
-        <select id="asalKayu">
-          <option value="">-- Pilih --</option>
-          <option value="Tumbuh Alami">Tumbuh Alami</option>
-          <option value="Budidaya">Budidaya</option>
-        </select>
-      </label>
+     <label>Asal Kayu:
+    <select id="asalKayu">
+      <option value="">-- Pilih --</option>
+      <option value="Tumbuh Alami">Tumbuh Alami</option>
+      <option value="Budidaya">Budidaya</option>
+    </select>
+  </label><br>
 
       <label>Jenis Perizinan:
         <select id="jenisPerizinan">
           <option value="">-- Pilih --</option>
           <option value="PBPH">PBPH</option>
           <option value="PPKH">PPKH</option>
-          <!-- dst -->
+      	  <option value="PPKKNK">PPKKNK</option>
+      	  <option value="PELEPASAN KH">PELEPASAN KH</option>
+      	  <option value="PHAT">PHAT</option>
+     	  <option value="PS">PS</option>
         </select>
-      </label>
+      </label><br><br>
 
       <button id="btnLanjut" onclick="lanjutKontainer()">Lanjut</button>
-    </div>
+      </div>
 
     <div id="kontainerInput" style="display: none;"></div>
 
     <div class="footer">
-      <p><strong>Disclaimer:</strong> Total PSDH-DR yang dihasilkan merupakan hasil simulasi.</p>
-      <ol>
-        <li>PP No. 36 Tahun 2024</li>
-        <li>Permen LHK No. 2 Tahun 2025</li>
-      </ol>
+  <p><strong>Disclaimer:</strong></p> Total PSDH-DR yang dihasilkan merupakan Hasil Simulasi Perhitungan PSDH-DR
+  <p><strong>Berdasarkan:</strong></p>
+  <ol>
+    <li>Peraturan Pemerintah Nomor 36 Tahun 2024 Tentang Jenis dan Tarif Atas Jenis Penerimaan Negara Bukan Pajak Yang Berlaku Pada Kementerian Lingkungan Hidup Dan Kehutanan</li>
+    <li>Peraturan Menteri Kehutanan Nomor 2 Tahun 2025 Tentang Harga Patokan Hasil Hutan Kayu Dan Hasil Hutan Bukan Kayu Untuk Penghitungan Penerimaan Negara Bukan Pajak</li>
+  </ol>
     </div>
 
     <div class="footer copyright">
-      <p>&copy; 2025 BPHL 8 Surabaya | Kementerian Kehutanan</p>
-    </div>
+    <p style="text-align:center; margin-top: 30px; font-size: 12px; color: #666;">
+        &copy; 2025 BPHL 8 Surabaya | Kementerian Kehutanan
+    </p>
+</div>
   </div>
 
   <script src="script.js"></script>
