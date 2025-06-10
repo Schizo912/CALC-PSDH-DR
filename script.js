@@ -1182,6 +1182,7 @@ function simpanData() {
     const totalPohon = data.length;
     const totalNilai = totalPsdh + totalDr;
 
+     downloadCSV_PSDHDR(data);  
     // ✅ Tampilkan rekap setelah tombol simpan ditekan
     const rekapDiv = document.getElementById("rekapSederhana");
     if (rekapDiv) {
