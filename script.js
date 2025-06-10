@@ -708,7 +708,7 @@ function renderKontainer(kode) {
     </table>
 
     <button onclick='tambahBaris()'>+ Tambah Baris</button>
-    <button onclick='simpanData()'>KALKULASI REKAPAN & DOWNLOAD CSV</button>
+    <button onclick='simpanData()'>KALKULASI REKAPAN</button>
     <div id="rekapSederhana" class="rekap-box" style="display: none;"></div>
 
     <hr style="margin:20px 0;">
@@ -1233,7 +1233,7 @@ function tampilkanDenda() {
             <td style="width:30px; padding-top:6px;">
               <input type="radio" id="radio-${idx}" name="radio-denda" value="${item[1]}" onchange="hitungTotalDenda(this)">
             </td>
-            <td style="padding:6px 0; color:#5c3d00; font-size:14px; line-height:1.4;">
+            <td style="padding:6px 0; color:#5c3d00; font-size:14px; line-height:1.4;text-align: left;">
               <label for="radio-${idx}">${item[0]} <span style="color:#997000;">(x${item[1]} PSDH)</span></label>
             </td>
           </tr>
