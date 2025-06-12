@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kalkulator PSDH-DR & DENDA</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>KALKULATOR HHBK</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="wrapper">
 
 <div style="
   background-color: #e2e2e2;
@@ -39,97 +38,231 @@
   </div>
 </div>
 
-
-    <div id="kontainerIdentitas">
-      <label>Nama Pelaku Usaha:
-        <input type="text" id="namaPelakuUsaha">
-      </label>
-      <label>Provinsi:
-        <select id="provinsi">
-          <option value="">-- Pilih Provinsi --</option>
-          <option>Aceh</option>
-      	<option>Sumatera Utara</option>
-      <option>Sumatera Barat</option>
-      <option>Riau</option>
-      <option>Jambi</option>
-      <option>Sumatera Selatan</option>
-      <option>Bengkulu</option>
-      <option>Lampung</option>
-      <option>Kepulauan Bangka Belitung</option>
-      <option>Kepulauan Riau</option>
-      <option>DKI Jakarta</option>
-      <option>Jawa Barat</option>
-      <option>Jawa Tengah</option>
-      <option>DI Yogyakarta</option>
-      <option>Jawa Timur</option>
-      <option>Banten</option>
-      <option>Bali</option>
-      <option>Nusa Tenggara Barat</option>
-      <option>Nusa Tenggara Timur</option>
-      <option>Kalimantan Barat</option>
-      <option>Kalimantan Tengah</option>
-      <option>Kalimantan Selatan</option>
-      <option>Kalimantan Timur</option>
-      <option>Kalimantan Utara</option>
-      <option>Sulawesi Utara</option>
-      <option>Sulawesi Tengah</option>
-      <option>Sulawesi Selatan</option>
-      <option>Sulawesi Tenggara</option>
-      <option>Gorontalo</option>
-      <option>Sulawesi Barat</option>
-      <option>Maluku</option>
-      <option>Maluku Utara</option>
-      <option>Papua</option>
-      <option>Papua Barat</option>
-      <option>Papua Tengah</option>
-      <option>Papua Pegunungan</option>
-      <option>Papua Barat Daya</option>
-      <option>Papua Selatan</option>
-    </select>
-  </label><br>
-
-     <label>Asal Kayu:
-    <select id="asalKayu">
-      <option value="">-- Pilih --</option>
-      <option value="Tumbuh Alami">Tumbuh Alami</option>
-      <option value="Budidaya">Budidaya</option>
-    </select>
-  </label><br>
-
-      <label>Jenis Perizinan:
-        <select id="jenisPerizinan">
-          <option value="">-- Pilih --</option>
-          <option value="PBPH">PBPH</option>
-          <option value="PPKH">PPKH</option>
-      	  <option value="PPKKNK">PPKKNK</option>
-      	  <option value="PELEPASAN KH">PELEPASAN KH</option>
-      	  <option value="PHAT">PHAT</option>
-     	  <option value="PS">PS</option>
-        </select>
-      </label><br><br>
-
-      <button id="btnLanjut" onclick="lanjutKontainer()">Lanjut</button>
-      </div>
-
-    <div id="kontainerInput" style="display: none;"></div>
-
-    <div class="footer">
-  <p><strong>Disclaimer:</strong></p> PSDH-DR dan Denda yang dihasilkan merupakan Hasil Simulasi Perhitungan
-  <p><strong>Berdasarkan:</strong></p>
-  <ol>
-    <li>Peraturan Pemerintah Nomor 36 Tahun 2024 Tentang Jenis dan Tarif Atas Jenis Penerimaan Negara Bukan Pajak Yang Berlaku Pada Kementerian Lingkungan Hidup Dan Kehutanan</li>
-    <li>Peraturan Menteri Kehutanan Nomor 8 Tahun 2021 Tentang Tata Hutan Dan Penyusunan Rencana Pengelolaan Hutan, Serta Pemanfaatan Hutan Di Hutan Lindung Dan Hutan Produksi</li>
-    <li>Peraturan Menteri Kehutanan Nomor 2 Tahun 2025 Tentang Harga Patokan Hasil Hutan Kayu Dan Hasil Hutan Bukan Kayu Untuk Penghitungan Penerimaan Negara Bukan Pajak</li>
-  </ol>
+  <div class="container">
+    <div class="input-group">
+      <label for="hhbk">Jenis HHBK:</label>
+      <input list="hhbkList" id="hhbk" placeholder="Ketik atau pilih HHBK" oninput="updateSatuan()">
+      <datalist id="hhbkList">
+  <option value="Kelompok Rotan Pulut --------------------">
+  <option value="Rotan Pulut Merah">
+  <option value="Rotan Pulut Putih">
+  <option value="Rotan Lilin">
+  <option value="Rotan Lacak">
+  <option value="Rotan Datuk">
+  <option value="Kelompok Rotan Sega --------------------">
+  <option value="Rotan Sega (Taman)">
+  <option value="Rotan Sega Air (Ronti)">
+  <option value="Rotan Sega Badak">
+  <option value="Rotan Irit/Jahab">
+  <option value="Kelompok Rotan Lambang --------------------">
+  <option value="Rotan Lambang">
+  <option value="Rotan Anduru">
+  <option value="Rotan Lita">
+  <option value="Rotan Sabutan">
+  <option value="Rotan Ampar Tikar">
+  <option value="Rotan Terumpu">
+  <option value="Rotan Jermasin">
+  <option value="Kelompok Rotan Tohiti --------------------">
+  <option value="Rotan Tohiti Diameters < 25 mm">
+  <option value="Rotan Tohiti Diameter > 25 mm">
+  <option value="Kelompok Rotan Manau --------------------">
+  <option value="Rotan Manau">
+  <option value="Rotan Manau Tikus">
+  <option value="Rotan Riang">
+  <option value="Rotan Manau Padi">
+  <option value="Kelompok Rotan Semambu --------------------">
+  <option value="Rotan Semambu">
+  <option value="Rotan Tabu-tabu">
+  <option value="Rotan Wilatung">
+  <option value="Rotan Nawi">
+  <option value="Rotan Dahan">
+  <option value="otan Jenis Lain --------------------">
+  <option value="Rotan Jenis Lainnya">
+  <option value="Bambu Hutan --------------------">
+  <option value="Bambu Apus">
+  <option value="Bambu Petung">
+  <option value="Bambu Milah">
+  <option value="Bambu Glontang">
+  <option value="Bambu Jenis Lainnya">
+  <option value="Tebu dan Batang --------------------">
+  <option value="Tebu">
+  <option value="Batang Kelapa / Kelapa Sawit">
+  <option value="Tual Sagu">
+  <option value="Nibung Bulat">
+  <option value="Resin --------------------">
+  <option value="Resin Mata Kucing">
+  <option value="Resin Batu">
+  <option value="Resin Kopal">
+  <option value="Resin Pilau">
+  <option value="Resin Rasak">
+  <option value="Resin Daging">
+  <option value="Resin Gaharu">
+  <option value="Gubal Gaharu">
+  <option value="Kemedangan">
+  <option value="Kemenyan">
+  <option value="Gambir">
+  <option value="Penghasil Resin Lainnya">
+  <option value="Kelompok Getah --------------------">
+  <option value="Getah Jelutung">
+  <option value="Getah Ketiau">
+  <option value="Getah Karet">
+  <option value="Getah Hangkang">
+  <option value="Getah Sundik">
+  <option value="Getah Pinus">
+  <option value="Getah Lainnya">
+  <option value="Kelompok Kulit Kayu --------------------">
+  <option value="Acasia">
+  <option value="Bakau">
+  <option value="Kalapari">
+  <option value="Gelam">
+  <option value="Kayu Salaro">
+  <option value="Kayu Laut">
+  <option value="Kayu Lawang">
+  <option value="Kayu Kusarang">
+  <option value="Kayu Manis">
+  <option value="Masoi">
+  <option value="Nyirih">
+  <option value="Tangir">
+  <option value="Tinggi">
+  <option value="Tarok">
+  <option value="Soga">
+  <option value="Suka">
+  <option value="Pulosantan">
+  <option value="Gemor / Salampati">
+  <option value="Medang Keladi">
+  <option value="Kulit kayu hutan jenis lainnya">
+  <option value="Kelompok Buah-buahan --------------------">
+  <option value="Pala">
+  <option value="Tandan buah sawit">
+  <option value="Durian">
+  <option value="Nangka">
+  <option value="Cempedak">
+  <option value="Buah merah">
+  <option value="Cengkeh">
+  <option value="Rotan">
+  <option value="Rotan Jernang">
+  <option value="Salak">
+  <option value="Kepayang">
+  <option value="Cabai">
+  <option value="Kelapa">
+  <option value="Lontar">
+  <option value="Aren / Kolang-Kaling">
+  <option value="Matoa">
+  <option value="Manggis">
+  <option value="Petai">
+  <option value="Jengkol">
+  <option value="Duku / Langsat">
+  <option value="Pisang">
+  <option value="Asam / Asan Jawa">
+  <option value="Asam Kandis">
+  <option value="Kedondong">
+  <option value="Kakao">
+  <option value="Sirsak">
+  <option value="Vanili">
+  <option value="Buah-buahan yang tidak tercantum di atas">
+  <option value="Kelompok Biji --------------------">
+  <option value="Biji Tengkawang">
+  <option value="Biji Kemiri">
+  <option value="Mede/Mete">
+  <option value="Kenari">
+  <option value="Biga">
+  <option value="Asam">
+  <option value="Seed lac">
+  <option value="Padi/Gabah">
+  <option value="Jagung">
+  <option value="Lada">
+  <option value="Kopi Robusta /Jenis lainnya (dengan kulit)">
+  <option value="Kopi Arabica (dengan kulit)">
+  <option value="Biji-bijian Jenis lainnya yang tidak tercantum di atas">
+  <option value="Kelompok Umbi --------------------">
+  <option value="Umbi porang">
+  <option value="Singkong/Ubi Jalar">
+  <option value="Talas">
+  <option value="Pasak bumi">
+  <option value="Umbi-umbian yang tidak tercantum di atas">
+  <option value="Kelompok Daun --------------------">
+  <option value="Daun Kayu Putih">
+  <option value="Daun Cengkeh">
+  <option value="Rumput Gajah">
+  <option value="Daun Kaliandra">
+  <option value="Gamal">
+  <option value="Lamtoro">
+  <option value="Turi">
+  <option value="SerehSereh Wangi">
+  <option value="Kratom">
+  <option value="Kenaf">
+  <option value="Nilam">
+  <option value="Daun-daunan Jenis lainnya">
+  <option value="Kelompok Akar --------------------">
+  <option value="Akar Lawang">
+  <option value="Akar Wangi">
+  <option value="Akar Pakanangi">
+  <option value="Akar-akaran Jenis lainnya">
+  <option value="Kelompok Lain-lain --------------------">
+  <option value="Nibung Bulat">
+  <option value="Lilin Tawon">
+  <option value="Madu">
+  <option value="Nira Nipah">
+  <option value="Ijuk">
+  <option value="Ketak">
+  <option value="Kokon Ulat Sutera">
+  <option value="Sarang Burung Walet">
+      </datalist>
     </div>
 
-    <div class="footer copyright">
-    <p style="text-align:center; margin-top: 30px; font-size: 12px; color: #666;">
-        &copy; 2025 BPHL 8 Surabaya | Kementerian Kehutanan
-    </p>
-</div>
+    <div class="input-group">
+      <label for="satuan">Satuan:</label>
+      <input type="text" id="satuan" readonly>
+    </div>
+
+    <div class="input-group">
+      <label for="harga">Harga Patokan:</label>
+      <input type="text" id="harga" readonly>
+    </div>
+
+    <div class="input-group">
+      <label for="jumlah">Jumlah:</label>
+      <input type="number" id="jumlah" min="0" step="any" placeholder="Masukkan jumlah...">
+    </div>
+
+    <div class="input-group">
+      <label for="ijin">Jenis Izin:</label>
+      <select id="ijin">
+        <option value="PBPH">PBPH</option>
+        <option value="PPKH">PPKH</option>
+        <option value="Pelepasan Kawasan">Pelepasan Kawasan</option>
+        <option value="PPKKNK">PPKKNK</option>
+        <option value="Hak Pengelolaan Hutan">Hak Pengelolaan Hutan</option>
+        <option value="Kemitraan Konservasi">Kemitraan Konservasi</option>
+        <option value="Perhutanan Sosial">Perhutanan Sosial</option>
+      </select>
+    </div>
+
+    <div class="button-group">
+      <button id="btnHitung" onclick="saveData()">Hitung</button>
+      <button id="btnBersihkan" onclick="clearResults()">Bersihkan Hasil</button>
+    </div>
+
+    <div id="hasil"></div>
   </div>
 
-  <script src="script.js"></script>
+  <div class="footer">
+    <p><strong>Disclaimer:</strong></p>
+    Total PNBP yang dihasilkan merupakan Hasil Simulasi Perhitungan PNBP
+    <p><strong>Berdasarkan:</strong></p>
+    <ol>
+      <li>Peraturan Pemerintah Nomor 36 Tahun 2024 Tentang Jenis dan Tarif Atas Jenis Penerimaan Negara Bukan Pajak Yang Berlaku Pada Kementerian Lingkungan Hidup Dan Kehutanan</li>
+    <li>Peraturan Menteri Kehutanan Nomor 2 Tahun 2025 Tentang Harga Patokan Hasil Hutan Kayu Dan Hasil Hutan Bukan Kayu Untuk Penghitungan Penerimaan Negara Bukan Pajak</li>
+    </ol>
+  </div>
+
+  <div class="footer copyright">
+    <p style="text-align:center; margin-top: 30px; font-size: 12px; color: #666;">
+      &copy; 2025 BPHL 8 Surabaya | Kementerian Kehutanan
+    </p>
+  </div>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
