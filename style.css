@@ -132,6 +132,18 @@ td input, td select {
   font-weight: 600;
 }
 
+.table-scroll {
+  width: 100%;
+  overflow-x: auto;
+  margin: 0 auto 18px auto;
+  padding-bottom: 4px;
+}
+.table-scroll table {
+  min-width: 950px;
+  width: 100%;
+  margin: 0;
+}
+
 @media (max-width: 768px) {
   th, td {
     font-size: 12px;
