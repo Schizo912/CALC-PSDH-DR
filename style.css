@@ -67,53 +67,7 @@ label {
   font-weight: 600;
   font-size: 1rem;
 }
-input[type="text"], input[type="number"], select {
-  width: 100%;
-  max-width: 420px;
-  min-width: 120px;
-  margin-bottom: 10px;
-  padding: 10px 14px;
-  font-size: 1rem;
-  background: #f7f8f6;
-  border: 1.7px solid #e1e3de;
-  border-radius: 9px;
-  transition: border 0.15s, box-shadow 0.15s;
-  box-shadow: 0 1px 6px rgba(0,64,32,0.03);
-  outline: none;
-  color: #205b3c;
-  appearance: none;
-}
 
-input[type="text"]:focus,
-input[type="number"]:focus,
-select:focus {
-  border-color: var(--hijau-kemenhut);
-  background: #f3f6f0;
-  box-shadow: 0 1px 10px rgba(1,128,64,0.07);
-}
-
-select {
-  background-image: url('data:image/svg+xml;utf8,<svg fill="gray" height="18" viewBox="0 0 24 24" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
-  background-repeat: no-repeat;
-  background-position: right 10px center;
-  background-size: 22px 22px;
-  cursor: pointer;
-}
-
-input[type="text"]::placeholder {
-  color: #aaa;
-  font-style: italic;
-  opacity: 1;
-}
-
-label {
-  font-weight: 600;
-  font-size: 1rem;
-  color: #029640;
-  margin-bottom: 4px;
-  margin-top: 14px;
-  letter-spacing: 0.2px;
-}
 input, select, .input-group, label, .rekap-box {
   max-width: 95%;
   width: 95%;
@@ -294,12 +248,6 @@ fieldset {
     max-width: 99vw !important;
     margin-left: 0 !important;
     margin-right: 0 !important;
-  }
-  input[type="text"], input[type="number"], select {
-    width: 98vw !important;
-    max-width: 99vw !important;
-    font-size: 1rem;
-    padding: 10px 11px;
   }
   .header-title {
     font-size: 1.1rem;
