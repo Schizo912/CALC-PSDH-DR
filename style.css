@@ -10,14 +10,13 @@ body {
 
 .wrapper {
   background: #fff;
-  max-width: 520px;
-  margin: 34px auto 24px auto;
+  width: 95vw;
+  max-width: 1500px; /* Atau bisa kamu adjust */
+  margin: 36px auto 30px auto;
   border-radius: 24px;
   box-shadow: 0 6px 32px rgba(0,64,32,0.08);
   overflow: hidden;
-  padding-bottom: 22px;
-  min-height: 50vh;
-}
+  padding-bottom: 24px;
   /* Tambah padding supaya box & tombol tidak nempel ke pinggir */
   padding-left: 5%;
   padding-right: 5%;
@@ -72,17 +71,15 @@ label {
   font-size: 1rem;
 }
 
-input, select {
-  width: 100%;
-  padding: 10px 12px;
-  font-size: 1rem;
-  border-radius: 7px;
-  border: 1.2px solid #ccc;
+input, select, .input-group, label, .rekap-box {
+  max-width: 95%;
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
   box-sizing: border-box;
-  background: #f9fbfa;
-  transition: border-color 0.2s;
-  margin-bottom: 4px;
+  display: block;
 }
+
 input:focus, select:focus {
   border-color: var(--hijau-kemenhut);
   outline: none;
@@ -153,6 +150,17 @@ th, td {
 
 th {
   white-space: nowrap;
+}
+.table-scroll {
+  width: 100%;
+  overflow-x: auto;
+  margin: 0 auto 20px auto;
+  /* biar tak nempel ke tepi */
+  padding-bottom: 8px;
+}
+.table-scroll table {
+  min-width: 950px; /* atau min-width yang kamu butuh */
+  width: 100%;
 }
 
 .namaTanaman {
@@ -232,15 +240,22 @@ th {
 
 @media (max-width: 768px) {
   .wrapper {
+    width: 99vw;
     max-width: 99vw;
+    border-radius: 0;
     margin: 0;
-    border-radius: 0 !important;
-    min-height: 96vh;
+    padding: 0 2vw 18px 2vw;
   }
   .header {
     border-radius: 0;
-    padding: 18px 4vw 13px 4vw;
-    gap: 11px;
+    padding: 16px 3vw 13px 3vw;
+    gap: 8px;
+  }
+  input, select, .input-group, .container, .form-area, .rekap-box {
+    width: 99vw !important;
+    max-width: 99vw !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
   }
   .header-title {
     font-size: 1.1rem;
@@ -254,10 +269,10 @@ th {
     padding-left: 2vw;
     padding-right: 2vw;
   }
-  .tabel-scroll {
-    width: 100vw;
-    margin-left: -2vw;
-    margin-right: -2vw;
+  .table-scroll {
+    width: 99vw;
+    max-width: 99vw;
+    padding: 0;
   }
   th, td {
     font-size: 13px;
