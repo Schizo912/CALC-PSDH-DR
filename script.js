@@ -691,12 +691,22 @@ function renderKontainer(kode) {
     <b>Jenis Perizinan:</b> ${meta.jenisPerizinan}<br>
     </fieldset><br>
 
-    <table border='1'><thead><tr>
+    <div class="table-scroll">
+  <table border='1'>
     <thead style="position:sticky; top:0; background:#f0f0f0; z-index:1;">
-      <th>Nama Tanaman</th><th>Diameter (cm)</th><th>Tinggi Bebas Cabang (m)</th>
-      <th>Volume (m3)</th><th>Kelompok Jenis</th><th>Sortimen</th>
-      <th>PSDH (Rp)</th><th>DR (Rp)</th><th>Aksi</th>
-    </tr></thead><tbody id='inputBody'></tbody>
+      <tr>
+        <th>Nama Tanaman</th>
+        <th>Diameter (cm)</th>
+        <th>Tinggi Bebas Cabang (m)</th>
+        <th>Volume (m3)</th>
+        <th>Kelompok Jenis</th>
+        <th>Sortimen</th>
+        <th>PSDH (Rp)</th>
+        <th>DR (Rp)</th>
+        <th>Aksi</th>
+      </tr>
+    </thead>
+    <tbody id='inputBody'></tbody>
     <tfoot>
       <tr>
         <td colspan="6" style="text-align:right;"><b>Total:</b></td>
@@ -705,7 +715,9 @@ function renderKontainer(kode) {
         <td></td>
       </tr>
     </tfoot>
-    </table>
+  </table>
+</div>
+
 
     <button onclick='tambahBaris()'>+ Tambah Baris</button>
     <button onclick='simpanData()'>KALKULASI REKAPAN & DOWNLOAD CSV PSDH-DR</button>
