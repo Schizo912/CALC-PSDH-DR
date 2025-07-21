@@ -707,16 +707,16 @@ function renderKontainer(kode) {
     </tfoot>
     </table>
 
-    <button onclick='tambahBaris()'>+ Tambah Baris</button>
-    <button onclick='simpanData()'>KALKULASI REKAPAN & DOWNLOAD CSV PSDH-DR</button>
-    <div id="rekapSederhana" class="rekap-box" style="display: none;"></div>
+   <div class="button-row">
+  <button onclick='tambahBaris()'>+ Tambah Baris</button>
+  <button onclick='simpanData()'>KALKULASI REKAPAN & DOWNLOAD CSV PSDH-DR</button>
+</div>
+<hr>
+<div class="button-row">
+  <button onclick="tampilkanDenda()">Hitung Denda</button>
+  <button onclick="kembaliKeKontainer1()">Kembali</button>
+</div>
 
-    <hr style="margin:20px 0;">
-
-    <button onclick="tampilkanDenda()">Hitung Denda</button>
-    <div id="daftarDenda" style="display:none; margin-top:10px;"></div>
-    <div id="totalDenda" style="display:none; font-weight:bold; margin-top:5px;"></div>
-    <div id="rekapDendaTable" style="margin-top:20px; display:none;"></div>
 
 
     <div style="display: flex; justify-content: flex-start; gap: 10px; margin-top: 20px;">
