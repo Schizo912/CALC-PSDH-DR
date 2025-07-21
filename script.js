@@ -691,6 +691,7 @@ function renderKontainer(kode) {
     <b>Jenis Perizinan:</b> ${meta.jenisPerizinan}<br>
     </fieldset><br>
 
+    <div class="table-scroll">
     <table border='1'><thead><tr>
     <thead style="position:sticky; top:0; background:#f0f0f0; z-index:1;">
       <th>Nama Tanaman</th><th>Diameter (cm)</th><th>Tinggi Bebas Cabang (m)</th>
