@@ -691,60 +691,46 @@ function renderKontainer(kode) {
     <b>Jenis Perizinan:</b> ${meta.jenisPerizinan}<br>
     </fieldset><br>
 
-    <!-- MULAI TAMBAHKAN DIV DI SINI -->
-    <div class="table-scroll">
-      <table border='1'>
-        <thead style="position:sticky; top:0; background:#f0f0f0; z-index:1;">
-          <tr>
-            <th>Nama Tanaman</th>
-            <th>Diameter (cm)</th>
-            <th>Tinggi Bebas Cabang (m)</th>
-            <th>Volume (m3)</th>
-            <th>Kelompok Jenis</th>
-            <th>Sortimen</th>
-            <th>PSDH (Rp)</th>
-            <th>DR (Rp)</th>
-            <th>Aksi</th>
-          </tr>
-        </thead>
-        <tbody id='inputBody'></tbody>
-        <tfoot>
-          <tr>
-            <td colspan="6" style="text-align:right;"><b>Total:</b></td>
-            <td><input id="totalPsdh" type="text" readonly style="text-align:center;"></td>
-            <td><input id="totalDr" type="text" readonly style="text-align:center;"></td>
-            <td></td>
-          </tr>
-        </tfoot>
-      </table>
-    </div>
-    <!-- SELESAI TAMBAHKAN DIV -->
+    <table border='1'><thead><tr>
+    <thead style="position:sticky; top:0; background:#f0f0f0; z-index:1;">
+      <th>Nama Tanaman</th><th>Diameter (cm)</th><th>Tinggi Bebas Cabang (m)</th>
+      <th>Volume (m3)</th><th>Kelompok Jenis</th><th>Sortimen</th>
+      <th>PSDH (Rp)</th><th>DR (Rp)</th><th>Aksi</th>
+    </tr></thead><tbody id='inputBody'></tbody>
+    <tfoot>
+      <tr>
+        <td colspan="6" style="text-align:right;"><b>Total:</b></td>
+        <td><input id="totalPsdh" type="text" readonly style="text-align:center;"></td>
+        <td><input id="totalDr" type="text" readonly style="text-align:center;"></td>
+        <td></td>
+      </tr>
+    </tfoot>
+    </table>
 
-   <div class="button-row">
-      <button onclick='tambahBaris()'>+ Tambah Baris</button>
-      <button onclick='simpanData()'>KALKULASI REKAPAN & DOWNLOAD CSV PSDH-DR</button>
-    </div>
+    <button onclick='tambahBaris()'>+ Tambah Baris</button>
+    <button onclick='simpanData()'>KALKULASI REKAPAN & DOWNLOAD CSV PSDH-DR</button>
+    <div id="rekapSederhana" class="rekap-box" style="display: none;"></div>
 
-    <div id="rekapSederhana" class="rekap-box" style="display: none; margin-bottom:18px"></div>
+    <hr style="margin:20px 0;">
 
-    <hr style="margin:18px 0; width:90%; margin-left:auto; margin-right:auto;">
-
-    <div class="button-row">
-      <button onclick="tampilkanDenda()">Hitung Denda</button>
-      <button id="btnDownloadDenda" onclick="downloadCSV_Denda()" style="display:none;">Download CSV Perhitungan Denda</button>
-      <button onclick="kembaliKeKontainer1()">Kembali</button>
-    </div>
-
+    <button onclick="tampilkanDenda()">Hitung Denda</button>
     <div id="daftarDenda" style="display:none; margin-top:10px;"></div>
     <div id="totalDenda" style="display:none; font-weight:bold; margin-top:5px;"></div>
     <div id="rekapDendaTable" style="margin-top:20px; display:none;"></div>
+
+
+    <div style="display: flex; justify-content: flex-start; gap: 10px; margin-top: 20px;">
+  <button id="btnDownloadDenda" onclick="downloadCSV_Denda()" style="display:none;">Download CSV Perhitungan Denda</button>
+  <button onclick="kembaliKeKontainer1()">Kembali</button>
+</div>
+
+
   `;
 
   container.innerHTML = html;
   tambahBaris();
   document.getElementById('kontainerInput').style.display = 'block';
 }
-
 
 
 function tambahBaris() {
