@@ -711,18 +711,21 @@ function renderKontainer(kode) {
   <button onclick='tambahBaris()'>+ Tambah Baris</button>
   <button onclick='simpanData()'>KALKULASI REKAPAN & DOWNLOAD CSV PSDH-DR</button>
 </div>
-<hr>
+
+<div id="rekapSederhana" class="rekap-box" style="display: none; margin-bottom:18px"></div>
+
+<hr style="margin:18px 0; width:90%; margin-left:auto; margin-right:auto;">
+
 <div class="button-row">
   <button onclick="tampilkanDenda()">Hitung Denda</button>
-  <button onclick="kembaliKeKontainer1()">Kembali</button>
-</div>
-
-
-
-    <div style="display: flex; justify-content: flex-start; gap: 10px; margin-top: 20px;">
   <button id="btnDownloadDenda" onclick="downloadCSV_Denda()" style="display:none;">Download CSV Perhitungan Denda</button>
   <button onclick="kembaliKeKontainer1()">Kembali</button>
 </div>
+
+<div id="daftarDenda" style="display:none; margin-top:10px;"></div>
+<div id="totalDenda" style="display:none; font-weight:bold; margin-top:5px;"></div>
+<div id="rekapDendaTable" style="margin-top:20px; display:none;"></div>
+
 
 
   `;
