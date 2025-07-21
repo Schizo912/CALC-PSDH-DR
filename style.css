@@ -12,17 +12,16 @@ body {
 }
 
 .wrapper {
-  max-width: 540px;
-  margin: 32px auto 24px auto;
-  border-radius: 18px;
-  box-shadow: 0 6px 32px rgba(0, 64, 32, 0.08);
-  border: 1.5px solid #e4e4e4;
-  background: #fff;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  min-height: 96vh;
-  padding-bottom: 18px;
+  margin: 24px auto 24px auto;
+  padding: 22px 0 22px 0;
+  border: 2px solid #997000;
+  border-radius: 12px;
+  background-color: #f7f8f6;
+  width: 95vw; /* ini kuncinya */
+  max-width: 1300px; /* tambahkan agar versi desktop tidak terlalu lebar */
+  min-width: 320px;
+  box-sizing: border-box;
+  overflow-x: auto;
   /* Tambah padding supaya box & tombol tidak nempel ke pinggir */
   padding-left: 5%;
   padding-right: 5%;
