@@ -683,53 +683,61 @@ function renderKontainer(kode) {
   const container = document.getElementById("kontainerInput");
 
   let html = `
-    <fieldset><legend>Informasi Pelaku Usaha</legend>
-    <b>Nama:</b> ${meta.namaPelakuUsaha}<br>
-    <b>Provinsi:</b> ${meta.provinsi}<br>
-    <b>Region:</b> ${meta.region}<br>
-    <b>Asal Kayu:</b> ${meta.asalKayu}<br>
-    <b>Jenis Perizinan:</b> ${meta.jenisPerizinan}<br>
-    </fieldset><br>
+  <fieldset><legend>Informasi Pelaku Usaha</legend>
+  <b>Nama:</b> ${meta.namaPelakuUsaha}<br>
+  <b>Provinsi:</b> ${meta.provinsi}<br>
+  <b>Region:</b> ${meta.region}<br>
+  <b>Asal Kayu:</b> ${meta.asalKayu}<br>
+  <b>Jenis Perizinan:</b> ${meta.jenisPerizinan}<br>
+  </fieldset><br>
 
-    <div class="table-scroll">
-    <table border='1'><thead><tr>
-    <thead style="position:sticky; top:0; background:#f0f0f0; z-index:1;">
-      <th>Nama Tanaman</th><th>Diameter (cm)</th><th>Tinggi Bebas Cabang (m)</th>
-      <th>Volume (m3)</th><th>Kelompok Jenis</th><th>Sortimen</th>
-      <th>PSDH (Rp)</th><th>DR (Rp)</th><th>Aksi</th>
-    </tr></thead><tbody id='inputBody'></tbody>
-    <tfoot>
-      <tr>
-        <td colspan="6" style="text-align:right;"><b>Total:</b></td>
-        <td><input id="totalPsdh" type="text" readonly style="text-align:center;"></td>
-        <td><input id="totalDr" type="text" readonly style="text-align:center;"></td>
-        <td></td>
-      </tr>
-    </tfoot>
+  <div class="table-scroll">
+    <table border='1'>
+      <thead>
+        <tr>
+          <th>Nama Tanaman</th>
+          <th>Diameter (cm)</th>
+          <th>Tinggi Bebas Cabang (m)</th>
+          <th>Volume (m3)</th>
+          <th>Kelompok Jenis</th>
+          <th>Sortimen</th>
+          <th>PSDH (Rp)</th>
+          <th>DR (Rp)</th>
+          <th>Aksi</th>
+        </tr>
+      </thead>
+      <tbody id='inputBody'></tbody>
+      <tfoot>
+        <tr>
+          <td colspan="6" style="text-align:right;"><b>Total:</b></td>
+          <td><input id="totalPsdh" type="text" readonly style="text-align:center;"></td>
+          <td><input id="totalDr" type="text" readonly style="text-align:center;"></td>
+          <td></td>
+        </tr>
+      </tfoot>
     </table>
+  </div> <!-- Ini menutup table-scroll, tombol2 di bawahnya tidak ikut scroll -->
 
-   <div class="button-row">
-  <button onclick='tambahBaris()'>+ Tambah Baris</button>
-  <button onclick='simpanData()'>KALKULASI REKAPAN & DOWNLOAD CSV PSDH-DR</button>
-</div>
+  <div class="button-row">
+    <button onclick='tambahBaris()'>+ Tambah Baris</button>
+    <button onclick='simpanData()'>KALKULASI REKAPAN & DOWNLOAD CSV PSDH-DR</button>
+  </div>
 
-<div id="rekapSederhana" class="rekap-box" style="display: none; margin-bottom:18px"></div>
+  <div id="rekapSederhana" class="rekap-box" style="display: none; margin-bottom:18px"></div>
 
-<hr style="margin:18px 0; width:90%; margin-left:auto; margin-right:auto;">
+  <hr style="margin:18px 0; width:90%; margin-left:auto; margin-right:auto;">
 
-<div class="button-row">
-  <button onclick="tampilkanDenda()">Hitung Denda</button>
-  <button id="btnDownloadDenda" onclick="downloadCSV_Denda()" style="display:none;">Download CSV Perhitungan Denda</button>
-  <button onclick="kembaliKeKontainer1()">Kembali</button>
-</div>
+  <div class="button-row">
+    <button onclick="tampilkanDenda()">Hitung Denda</button>
+    <button id="btnDownloadDenda" onclick="downloadCSV_Denda()" style="display:none;">Download CSV Perhitungan Denda</button>
+    <button onclick="kembaliKeKontainer1()">Kembali</button>
+  </div>
 
-<div id="daftarDenda" style="display:none; margin-top:10px;"></div>
-<div id="totalDenda" style="display:none; font-weight:bold; margin-top:5px;"></div>
-<div id="rekapDendaTable" style="margin-top:20px; display:none;"></div>
+  <div id="daftarDenda" style="display:none; margin-top:10px;"></div>
+  <div id="totalDenda" style="display:none; font-weight:bold; margin-top:5px;"></div>
+  <div id="rekapDendaTable" style="margin-top:20px; display:none;"></div>
+`;
 
-
-
-  `;
 
   container.innerHTML = html;
   tambahBaris();
