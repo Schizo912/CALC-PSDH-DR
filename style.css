@@ -5,26 +5,58 @@
 }
 
 body {
-  background-color: var(--abu-muda);
-  font-family: 'Segoe UI', Arial, sans-serif;
-  margin: 0;
-  padding: 0;
+  background: #f5f8f4;
 }
 
 .wrapper {
-  margin: 24px auto 24px auto;
-  padding: 22px 0 22px 0;
-  border: 2px solid #997000;
-  border-radius: 12px;
-  background-color: #f7f8f6;
-  width: 95vw; /* ini kuncinya */
-  max-width: 1300px; /* tambahkan agar versi desktop tidak terlalu lebar */
-  min-width: 320px;
-  box-sizing: border-box;
-  overflow-x: auto;
+  background: #fff;
+  max-width: 520px;
+  margin: 34px auto 24px auto;
+  border-radius: 24px;
+  box-shadow: 0 6px 32px rgba(0,64,32,0.08);
+  overflow: hidden;
+  padding-bottom: 22px;
+  min-height: 50vh;
+}
   /* Tambah padding supaya box & tombol tidak nempel ke pinggir */
   padding-left: 5%;
   padding-right: 5%;
+}
+.header {
+  background: #029640;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  padding: 26px 30px 20px 20px;
+  border-radius: 24px 24px 0 0;
+  border-bottom: 4px solid #cfa54a;
+  gap: 18px;
+}
+
+.header-logo img {
+  height: 48px;
+  width: 48px;
+  border-radius: 100%;
+  background: #fff;
+  object-fit: contain;
+  margin-right: 8px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+}
+.header-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.header-title {
+  font-size: 1.44rem;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+.header-bphl {
+  font-size: 1.13rem;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+  opacity: 0.97;
 }
 
 h2 {
@@ -200,11 +232,18 @@ th {
 
 @media (max-width: 768px) {
   .wrapper {
-    max-width: 100vw !important;
+    max-width: 99vw;
+    margin: 0;
     border-radius: 0 !important;
-    margin: 0 !important;
-    padding-left: 1vw;
-    padding-right: 1vw;
+    min-height: 96vh;
+  }
+  .header {
+    border-radius: 0;
+    padding: 18px 4vw 13px 4vw;
+    gap: 11px;
+  }
+  .header-title {
+    font-size: 1.1rem;
   }
   .footer, .rekap-box, fieldset, table, #rekapDendaTable, #daftarDenda, #totalDenda {
     max-width: 98vw !important;
