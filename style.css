@@ -1,58 +1,20 @@
-:root {
-  --hijau-kemenhut: #008833;
-  --coklat-kemenhut: #997000;
-  --abu-muda: #f7f8f6;
-}
-
 body {
-  background: #f5f8f4;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background-color: #f0f6f0;
+  color: #333;
 }
 
 .wrapper {
-  background: #fff;
-  width: 98vw;
-  max-width: 920px;
-  margin: 36px auto 30px auto;
-  border-radius: 24px;
-  box-shadow: 0 6px 32px rgba(0,64,32,0.08);
-  overflow: hidden;
-  padding-bottom: 30px;
-}
-.header {
-  background: #029640;
-  color: #fff;
-  display: flex;
-  align-items: center;
-  padding: 26px 30px 20px 20px;
-  border-radius: 24px 24px 0 0;
-  border-bottom: 4px solid #cfa54a;
-  gap: 18px;
-}
-
-.header-logo img {
-  height: 48px;
-  width: 48px;
-  border-radius: 100%;
-  background: #fff;
-  object-fit: contain;
-  margin-right: 8px;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
-}
-.header-content {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-}
-.header-title {
-  font-size: 1.44rem;
-  font-weight: bold;
-  letter-spacing: 0.5px;
-}
-.header-bphl {
-  font-size: 1.13rem;
-  font-weight: 600;
-  letter-spacing: 0.4px;
-  opacity: 0.97;
+  margin: 20px auto;
+  padding: 20px;
+  border: 3px solid #997000;
+  border-radius: 12px;
+  background-color: #f7f8f6;
+  width: 95vw;
+  max-width: 98%;
+  box-sizing: border-box;
+  overflow-x: auto;
 }
 
 h2 {
@@ -61,142 +23,79 @@ h2 {
   margin-bottom: 20px;
 }
 
-input[type="text"], input[type="number"], select {
-  width: 100%;
-  max-width: 420px;
-  min-width: 120px;
-  margin-bottom: 10px;
-  padding: 10px 14px;
-  font-size: 1rem;
-  background: #f7f8f6;
-  border: 1.7px solid #e1e3de;
-  border-radius: 9px;
-  transition: border 0.15s, box-shadow 0.15s;
-  box-shadow: 0 1px 6px rgba(0,64,32,0.03);
-  outline: none;
-  color: #205b3c;
-  appearance: none;
-}
-
-input[type="text"]:focus,
-input[type="number"]:focus,
-select:focus {
-  border-color: var(--hijau-kemenhut);
-  background: #f3f6f0;
-  box-shadow: 0 1px 10px rgba(1,128,64,0.07);
-}
-
-select {
-  background-image: url('data:image/svg+xml;utf8,<svg fill="gray" height="18" viewBox="0 0 24 24" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
-  background-repeat: no-repeat;
-  background-position: right 10px center;
-  background-size: 22px 22px;
-  cursor: pointer;
-}
-
-input[type="text"]::placeholder {
-  color: #aaa;
-  font-style: italic;
-  opacity: 1;
-}
-
 label {
-  font-weight: 600;
-  font-size: 1rem;
-  color: #029640;
-  margin-bottom: 4px;
-  margin-top: 14px;
-  letter-spacing: 0.2px;
-}
-
-input, select, .input-group, label, .rekap-box {
-  max-width: 95%;
-  width: 95%;
-  margin-left: auto;
-  margin-right: auto;
-  box-sizing: border-box;
   display: block;
+  margin-top: 10px;
+  font-weight: bold;
 }
 
-input:focus, select:focus {
-  border-color: var(--hijau-kemenhut);
-  outline: none;
+input, select {
+  width: 100%;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  text-align: center;
 }
 
-.button-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 7px;
-  justify-content: center;
-  width: 92%;
-  margin: 16px auto 10px auto;
-}
+ input[type="text"],
+  input[type="number"],
+  select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 4px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    text-align: center;
+  }
 
 button {
-  flex: 1 1 180px;
-  padding: 10px 0;
-  font-size: 0.97rem;
-  min-width: 150px;
-  max-width: 300px;
+  background-color: #4d8533;
+  color: white;
+  padding: 8px 16px;
   border: none;
-  border-radius: 7px;
+  margin: 5px;
+  border-radius: 5px;
   cursor: pointer;
-  background: linear-gradient(90deg, #008833, #27d58c 100%);
-  color: #fff;
-  font-weight: 600;
-  box-shadow: 0 2px 12px rgba(40,60,40,0.07);
-  transition: background 0.22s, transform 0.12s;
-  margin: 0;
-}
-button:hover {
-  background: linear-gradient(90deg, #0b9548 40%, #41ea7a 100%);
-  transform: translateY(-1.5px) scale(1.03);
-}
-fieldset {
-  margin-bottom: 16px;
-  border-radius: 7px;
-}
-legend {
-  font-size: 1rem;
-  font-weight: 700;
-  color: #997000;
-  padding: 0 6px;
 }
 
-/* Tabel */
+button:hover {
+  background-color: #376327;
+}
+
+fieldset {
+  border: 1px solid #ccc;
+  padding: 12px;
+  background-color: #eaf2ea;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
 table {
   width: 100%;
   border-collapse: collapse;
   margin-bottom: 15px;
   background-color: #fefefe;
-  min-width: 950px; /* tambahkan agar header tidak kependekan di desktop */
-  table-layout: auto; /* biarkan kolom mengikuti isi, supaya nama jelas */
-}
-
-th, td {
-  padding: 8px 6px;
-  text-align: center;
-  vertical-align: middle;
-  font-size: 15px;
 }
 
 th {
-  white-space: nowrap;
+  background-color: #d7e6d4;
+  color: #205b3c;
+  padding: 8px;
+  text-align: center;
 }
-.table-scroll {
-  width: 96%;
-  overflow-x: auto;
-  margin: 0 auto 18px auto;
-  padding-bottom: 4px;
+
+td {
+  padding: 6px;
+  text-align: center;
+  vertical-align: middle;
 }
-.table-scroll table {
-  min-width: 950px;
+
+td input, td select {
   width: 100%;
-  margin: 0;
-}
-.namaTanaman {
-  min-width: 150px; /* agar input nama tanaman tidak kependekan */
-  max-width: 250px;
+  box-sizing: border-box;
+  text-align: center;
 }
 
 .footer {
@@ -209,126 +108,41 @@ th {
   line-height: 1.5;
 }
 
-
 .footer ol {
   margin-left: 0;
   padding-left: 20px;
 }
-.tabel-scroll {
-  width: 100%;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
+
+.rekap-box {
+  background-color: #f4f8f4;
+  border: 2px solid #4a7c59;
+  border-left: 8px solid #2e5339;
+  border-radius: 8px;
+  padding: 12px 20px;
+  margin-top: 20px;
+  color: #2e5339;
+  font-family: 'Segoe UI', sans-serif;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  text-align: center;
 }
-.rekap-box,
-fieldset {
-  max-width: 92%;
-  width: 92%;
-  margin-left: auto;
-  margin-right: auto;
-  box-sizing: border-box;
-  display: block;
-}
+
 .rekap-box p {
   margin: 5px 0;
   font-size: 16px;
   font-weight: 600;
 }
-.footer {
-  width: 100%;
-  max-width: 480px;
-  margin: 28px auto 0 auto;
-  padding: 0 8px 5px 8px;
-  font-size: clamp(11px, 1.3vw, 13px);
-  color: #555;
-  text-align: justify;
-  line-height: 1.5;
-  background: none;
-  border-radius: 0;
-  box-shadow: none;
-}
-.footer ol {
-  margin-left: 0;
-  padding-left: 20px;
-}
-.footer.copyright {
-  text-align: center;
-  font-size: 12px;
-  color: #666;
-  margin-top: 20px;
-  margin-bottom: 6px;
-}
-/* Tombol di dalam kontainer input */
-#kontainerInput > .button-row {
-  margin-bottom: 0;
-  margin-top: 16px;
-}
 
 @media (max-width: 768px) {
-    .wrapper {
-    width: 99vw;
-    max-width: 99vw;
-    border-radius: 0;
-    margin: 0;
-    padding: 0;
-  }
-  .header {
-    border-radius: 0;
-    padding: 15px 3vw 12px 3vw;
-    gap: 7px;
-  }
-  fieldset {
-    max-width: 99vw !important;
-    width: 99vw !important;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-    padding-left: 2vw;
-    padding-right: 2vw;
-  }
-  input[type="text"], input[type="number"], select {
-    width: 98vw !important;
-    max-width: 99vw !important;
-    font-size: 1rem;
-    padding: 10px 11px;
-  }
-  input, select, .input-group, .container, .form-area, .rekap-box {
-    width: 99vw !important;
-    max-width: 99vw !important;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-  }
-  .header-title {
-    font-size: 1.1rem;
-  }
-  .footer, .rekap-box, fieldset, table, #rekapDendaTable, #daftarDenda, #totalDenda {
-    max-width: 98vw !important;
-    width: 98vw !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
-    border-radius: 0 !important;
-    padding-left: 2vw;
-    padding-right: 2vw;
-  }
-  .table-scroll {
-    width: 99vw;
-    max-width: 99vw;
-    padding: 0;
-  }
   th, td {
-    font-size: 13px;
-    padding: 5px 3px;
+    font-size: 12px;
+    padding: 4px;
   }
-  button {
-    width: 100%;
-  }
+
   .button-row {
-    width: 98vw !important;
     flex-direction: column;
-    gap: 8px;
-    margin-left: auto !important;
-    margin-right: auto !important;
   }
+
   button {
-    min-width: 0;
     width: 100%;
   }
 
