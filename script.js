@@ -641,6 +641,184 @@ const daftarDenda = {
   ]
 };
 
+const provinsiToWilayah = {
+  // Wilayah 1: Sumatra
+  "Aceh": "Wilayah 1",
+  "Sumatera Utara": "Wilayah 1",
+  "Sumatera Barat": "Wilayah 1",
+  "Riau": "Wilayah 1",
+  "Jambi": "Wilayah 1",
+  "Sumatera Selatan": "Wilayah 1",
+  "Bengkulu": "Wilayah 1",
+  "Lampung": "Wilayah 1",
+  "Kepulauan Bangka Belitung": "Wilayah 1",
+  "Kepulauan Riau": "Wilayah 1",
+
+  // Wilayah 2: Kalimantan
+  "Kalimantan Barat": "Wilayah 2",
+  "Kalimantan Tengah": "Wilayah 2",
+  "Kalimantan Selatan": "Wilayah 2",
+  "Kalimantan Timur": "Wilayah 2",
+  "Kalimantan Utara": "Wilayah 2",
+
+  // Wilayah 3: Sulawesi
+  "Sulawesi Utara": "Wilayah 3",
+  "Sulawesi Tengah": "Wilayah 3",
+  "Sulawesi Selatan": "Wilayah 3",
+  "Sulawesi Tenggara": "Wilayah 3",
+  "Gorontalo": "Wilayah 3",
+  "Sulawesi Barat": "Wilayah 3",
+
+  // Wilayah 4: Maluku & Papua
+  "Maluku": "Wilayah 4",
+  "Maluku Utara": "Wilayah 4",
+  "Papua": "Wilayah 4",
+  "Papua Barat": "Wilayah 4",
+  "Papua Tengah": "Wilayah 4",
+  "Papua Pegunungan": "Wilayah 4",
+  "Papua Barat Daya": "Wilayah 4",
+  "Papua Selatan": "Wilayah 4",
+
+  // Wilayah 5: Jawa, Bali, Nusa Tenggara
+  "DKI Jakarta": "Wilayah 5",
+  "Jawa Barat": "Wilayah 5",
+  "Jawa Tengah": "Wilayah 5",
+  "DI Yogyakarta": "Wilayah 5",
+  "Jawa Timur": "Wilayah 5",
+  "Banten": "Wilayah 5",
+  "Bali": "Wilayah 5",
+  "Nusa Tenggara Barat": "Wilayah 5",
+  "Nusa Tenggara Timur": "Wilayah 5"
+};
+
+const hargaLelang = {
+  "Kayu Lapis": {
+    "Wilayah 1": { 
+      "MERANTI": 1356000,
+      "RIMBA CAMPURAN": 814000,
+      "INDAH 2": 2456000,
+      "INDAH 1 Jati": 5652500
+  },
+    "Wilayah 2": {
+       "MERANTI": 1356000,
+       "RIMBA CAMPURAN": 814000,
+        "INDAH 2": 2456000,
+        "INDAH 1 Jati": 5652500
+        },
+    "Wilayah 3": { 
+      "MERANTI": 1356000,
+      "RIMBA CAMPURAN": 814000,
+      "INDAH 2": 2456000,
+      "INDAH 1 Jati": 5652500
+       },
+    "Wilayah 4": { 
+      "MERANTI": 1140000,
+      "RIMBA CAMPURAN": 611000,
+      "INDAH 2": 2456000,
+      "INDAH 1 Jati": 5652500
+       },
+    "Wilayah 5": { 
+      "MERANTI": 1582000,
+      "RIMBA CAMPURAN": 1131000,
+      "INDAH 2": 2600000,
+      "INDAH 1 Jati": 9045000
+       }
+  },
+  "Kayu Gergajian": {
+    "Wilayah 1": {
+      "MERANTI": 1228500,
+      "RIMBA CAMPURAN": 737000,
+      "INDAH 2": 2223000,
+      "INDAH 1 Jati": 8190000,
+      "MERANTI MERBAU": 3071000,
+      "INDAH 1": 14741000
+    },
+    "Wilayah 2": {
+      "MERANTI": 1228500,
+      "RIMBA CAMPURAN": 737000,
+      "INDAH 2": 2223000,
+      "INDAH 1 Jati": 8190000,
+      "MERANTI MERBAU": 3071000,
+      "INDAH 1": 14741000
+    },
+    "Wilayah 3": {
+      "MERANTI": 1228500,
+      "RIMBA CAMPURAN": 737000,
+      "INDAH 2": 2223000,
+      "INDAH 1 Jati": 8190000,
+      "MERANTI MERBAU": 3071000,
+      "INDAH 1": 14741000
+    },
+    "Wilayah 4": {
+      "MERANTI": 1033000,
+      "RIMBA CAMPURAN": 553000,
+      "INDAH 2": 2223000,
+      "INDAH 1 Jati": 8190000,
+      "MERANTI MERBAU": 3071000,
+      "INDAH 1": 14741000
+    },
+    "Wilayah 5": {
+      "MERANTI": 1433000,
+      "RIMBA CAMPURAN": 1023000,
+      "INDAH 2": 2355000,
+      "INDAH 1 Jati": 8580000,
+      "MERANTI MERBAU": 3071000,
+      "INDAH 1": 14741000
+    }
+  },
+  "Kayu Pacakan": {
+    "Wilayah 1": {
+      "MERANTI": 1083000,
+      "RIMBA CAMPURAN": 650000,
+      "INDAH 2": 1961000,
+      "INDAH 1 Jati": 4865000,
+      "MERANTI MERBAU": 2708000,
+      "INDAH 1": 13000000
+    },
+    "Wilayah 2": {
+      "MERANTI": 1083000,
+      "RIMBA CAMPURAN": 650000,
+      "INDAH 2": 1961000,
+      "INDAH 1 Jati": 4865000,
+      "MERANTI MERBAU": 2708000,
+      "INDAH 1": 13000000
+    },
+    "Wilayah 3": {
+      "MERANTI": 1083000,
+      "RIMBA CAMPURAN": 650000,
+      "INDAH 2": 1961000,
+      "INDAH 1 Jati": 4865000,
+      "MERANTI MERBAU": 2708000,
+      "INDAH 1": 13000000
+    },
+    "Wilayah 4": {
+      "MERANTI": 910000,
+      "RIMBA CAMPURAN": 488000,
+      "INDAH 2": 1961000,
+      "INDAH 1 Jati": 4865000,
+      "MERANTI MERBAU": 2283000,
+      "INDAH 1": 13000000
+    },
+    "Wilayah 5": {
+      "MERANTI": 1264000,
+      "RIMBA CAMPURAN": 903000,
+      "INDAH 2": 2077000,
+      "INDAH 1 Jati": 7223000,
+      "MERANTI MERBAU": 3161000,
+      "INDAH 1": 13542000
+    }
+  }
+};
+
+const biayaPersiapan = {
+  "Wilayah 1": 120000,
+  "Wilayah 2": 130000,
+  "Wilayah 3": 130000,
+  "Wilayah 4": 150000,
+  "Wilayah 5": 170000
+};
+
+
 function lanjutKontainer() {
   const namaPelakuUsaha = document.getElementById('namaPelakuUsaha').value;
   const provinsi = document.getElementById('provinsi').value;
@@ -1280,9 +1458,6 @@ function hitungTotalDenda(radio) {
   tampilkanRekapDenda(faktor);
 }
 
-
-
-
 function tampilkanRekapDenda(faktor) {
   const tbody = document.getElementById('inputBody');
   const rows = tbody.querySelectorAll('tr');
@@ -1310,7 +1485,6 @@ function tampilkanRekapDenda(faktor) {
       </thead>
       <tbody>
 `;
-
 
   rows.forEach((row, index) => {
     const nama = row.querySelector('.namaTanaman')?.value || "-";
@@ -1366,7 +1540,6 @@ function tampilkanRekapDenda(faktor) {
   document.getElementById("btnDownloadDenda").style.display = "inline-block";
 
 }
-
 
 function downloadCSV_PSDHDR(data) {
   const meta = window.metadata;
@@ -1480,3 +1653,4 @@ function kembaliKeKontainer1() {
 function hitungVolume(d, t) {
   return 0.7854 * d * d * (t * 0.6 * 0.0001);
 }
+
